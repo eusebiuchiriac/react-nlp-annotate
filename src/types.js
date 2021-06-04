@@ -81,7 +81,8 @@ export type NLPAnnotatorProps = {
   onPrev?: Function,
   titleContent?: string | ReactNode,
   onFinish?: string,
-  onChange?: string
+  onChange?: string,
+  showHeader?: boolean,
 }
 
 export type Output =

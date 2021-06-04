@@ -123,6 +123,7 @@ export default function NLPAnnotator(props: NLPAnnotatorProps) {
   return (
     <Container
       titleContent={props.titleContent}
+      showHeader={props.showHeader}
       onNext={props.onNext ? onNext : null}
       onPrev={props.onPrev ? onPrev : null}
       onClickHeaderItem={onClickHeaderItem}
