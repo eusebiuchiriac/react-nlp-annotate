@@ -13,7 +13,7 @@ export default ({
   numberOfSamples = 1,
   titleContent,
   onClickHeaderItem,
-  showHeader,
+  showHeader = true,
 }: any) => {
   const headerItems = useMemo(
     () =>
@@ -27,10 +27,12 @@ export default ({
       ].filter(Boolean),
     [currentSampleIndex, numberOfSamples]
   )
-  return (
+  if (!showHeader) {
+    return <Workspace> <Box padding={2}>{children}</Box></Workspace>
+  } return (
     <Workspace
       headerLeftSide={
-        titleContent === showHeader ? (undefined ? (
+        titleContent === undefined ? (
           <Box paddingLeft={2} fontWeight="bold">
             <Typography>
               Sample {currentSampleIndex + 1} / {numberOfSamples}
@@ -38,10 +40,10 @@ export default ({
           </Box>
         ) : (
           titleContent
-        )) : null
+        )
       }
       onClickHeaderItem={onClickHeaderItem}
-      headerItems={showHeader && headerItems}
+      headerItems={headerItems}
       iconSidebarItems={[]}
       rightSidebarItems={[]}
     >

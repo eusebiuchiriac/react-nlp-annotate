@@ -1,12 +1,13 @@
 {
   "name": "react-nlp-jt",
-  "version": "0.0.1",
+  "version": "0.0.11",
   "homepage": "https://universaldatatool.github.io/react-nlp-annotate/",
   "main": "./dist/lib.js",
   "dependencies": {
     "@material-ui/lab": "^4.0.0-alpha.56",
     "chroma-js": "^2.0.3",
     "color-alpha": "^1.0.4",
+    "jss": "10.0.0-alpha.17",
     "react-hotkeys": "^2.0.0",
     "react-material-workspace-layout": "^1.0.9",
     "react-select": "^3.0.8",
